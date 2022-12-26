@@ -3,8 +3,8 @@
 #include "Map.h"
 #include "Computer.h"
 
-enum class State {
-	User, Computer
+enum class State { // установка пространства имен
+	User, Computer 
 };
 
 class Play {
@@ -12,7 +12,7 @@ private:
 	State state;
 	sf::RenderWindow WinPlay;
 	sf::Texture MapBackTexture, QueueTexture, UserFieldTexture, CompFieldTexture, TurnTexture, button01;
-	sf::Sprite MapBackSprite, QueueSprite, UserFieldSprite, CompFieldSprite, TurnSprite; //про turn узнать
+	sf::Sprite MapBackSprite, QueueSprite, UserFieldSprite, CompFieldSprite, TurnSprite;
 	sf::Event GameEvent{};
 	Map UserMap, CompMap;
 	bool GameOver;
@@ -21,6 +21,5 @@ private:
 	void Turn();
 	bool Player(Map& CompMap, sf::RenderWindow& window, sf::RenderWindow& win, bool& isSunk);
 public:
-	Play();
 	Play(sf::RenderWindow& win);
 };
